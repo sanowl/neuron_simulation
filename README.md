@@ -59,6 +59,3 @@ You can extend this model by:
 - Enhancing the plasticity mechanisms
 - Adding more detailed calcium dynamics
 
-## License
-
-This project is open-source and available under the MIT License.
