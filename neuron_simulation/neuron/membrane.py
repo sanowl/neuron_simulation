@@ -150,7 +150,7 @@ class NeuronMembrane:
 
         for i, comp in enumerate(self.compartments):
             I_channels = comp.current(state['V'][i], state)
-            I_axial = 0  # Simplified, should consider neighboring compartments
+            I_axial = 0
             
             C_m = 1.0  # µF/cm²
             dstate['V'][i] = (I_ext[i] - I_channels - I_axial) / (C_m * comp.area)
