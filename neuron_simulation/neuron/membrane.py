@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.integrate import solve_ivp
 from numba import jit
-import xml.etree.ElementTree as ET
+import defusedxml.ElementTree
 
 class IonChannel:
     def __init__(self, g_max, E_rev):
@@ -85,7 +85,7 @@ class NeuronMembrane:
         self.state = self.initialize_state()
 
     def load_morphology(self, file):
-        tree = ET.parse(file)
+        tree = defusedxml.ElementTree.parse(file)
         root = tree.getroot()
         
         morphology = {'soma': [], 'dendrites': [], 'axon': []}

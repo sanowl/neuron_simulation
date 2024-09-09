@@ -1,1 +1,2 @@
 # Project dependencies
+defusedxml==0.7.1
